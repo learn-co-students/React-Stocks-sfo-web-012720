@@ -8,8 +8,10 @@ class PortfolioContainer extends Component {
       <div>
         <h2>My Portfolio</h2>
           {
+            this.props.portfolio.map((port,i) => 
+              <Stock stock={port} onClick ={() => {this.props.onClick(i)}}/>
             //render your portfolio stocks here
-          }
+          )}
       </div>
     );
   }
